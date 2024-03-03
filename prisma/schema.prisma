@@ -30,6 +30,14 @@ model User {
   createdAt DateTime @default(now())  
 }
 
+model Pacient {
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  phone String
+  createdAt DateTime @default(now()) 
+}
+
 enum Role {
   USER
   ADMIN
